@@ -14,7 +14,7 @@ docker push gaurav2730/multi-container-server:$SHA
 docker push gaurav2730/multi-container-worker:$SHA
 
 #Apply all configs on k8s folder
-kubectl -apply -f k8s
+kubectl apply -f k8s
 #Imperatively set latest image on each deployments
 kubectl set image deployments/server-deployment server=gaurav2730/multi-container-server:$SHA
 kubectl set image deployments/client-deployment client=gaurav2730/multi-container-client:$SHA
