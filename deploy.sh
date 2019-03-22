@@ -8,7 +8,8 @@ docker push gaurav2730/multi-container-client:latest
 docker push gaurav2730/multi-container-server:latest
 docker push gaurav2730/multi-container-worker:latest
 
-docker push gaurav2730/multi-container-client:$SHA #SHA is the Head value obtained from git checkin
+#SHA is the Head value obtained from git checkin
+docker push gaurav2730/multi-container-client:$SHA 
 docker push gaurav2730/multi-container-server:$SHA
 docker push gaurav2730/multi-container-worker:$SHA
 
