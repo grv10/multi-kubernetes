@@ -2,20 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class Fib extends Component {
-  /*state = {
+  state = {
     seenIndexes: [],
     values: {},
     index: ''
-    };*/
-  constructor(props){
-    super(props);
-    this.state = {
-    seenIndexes: [],
-    values: {},
-    index: ''
-    }
-  }
-  
+  };
 
   componentDidMount() {
     this.fetchValues();
@@ -46,8 +37,7 @@ class Fib extends Component {
   renderSeenIndexes() {
     console.log(this.state);
     console.log(this.state.seenIndexes);
-    //return this.state.seenIndexes.map(({ number }) => number).join(', ');
-    return this.state.seenIndexes.map(number => number).join(', ');
+    return this.state.seenIndexes.map(({ number }) => number).join(', ');
   }
 
   renderValues() {
