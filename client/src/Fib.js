@@ -41,7 +41,6 @@ class Fib extends Component {
     return this.state.seenIndexes.map(({ number }) => number).join(', ');
   }
 
-<<<<<<< HEAD
   // renderSeenIndexes = () => {
   //   let indexes = '';
   //   console.log(this.state);
@@ -52,8 +51,6 @@ class Fib extends Component {
   //   }
   //   return indexes;
   // }
-=======
->>>>>>> change fib file master
   renderValues() {
     const entries = [];
 
