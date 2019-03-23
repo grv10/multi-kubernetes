@@ -34,10 +34,21 @@ class Fib extends Component {
     this.setState({ index: '' });
   };
 
-  renderSeenIndexes() {
-    console.log(this.state);
-    console.log(this.state.seenIndexes);
-    return this.state.seenIndexes.map(({ number }) => number).join(', ');
+  // renderSeenIndexes() {
+  //   console.log(this.state);
+  //   console.log(this.state.seenIndexes);
+  //   return this.state.seenIndexes.map(({ number }) => number).join(', ');
+  // }
+
+  renderSeenIndexes = () => {
+    let indexes = '';
+    this.state.seenIndexes.forEach((number) =>
+      indexes += number + ', '
+    );
+    if (this.state.seenIndexes.length) {
+      indexes = indexes.substr(0, indexes.length-2);
+    }
+    return indexes;
   }
 
   renderValues() {
