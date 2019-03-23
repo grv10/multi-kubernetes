@@ -43,7 +43,6 @@ class Fib extends Component {
 
   // renderSeenIndexes = () => {
   //   let indexes = '';
-
   //   console.log(this.state);
   //   console.log(this.state.seenIndexes);
   //   this.state.seenIndexes.forEach((number) => indexes += number + ', ');
