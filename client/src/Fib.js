@@ -49,7 +49,6 @@ class Fib extends Component {
   //   if (this.state.seenIndexes.length) {
   //     indexes = indexes.substr(0, indexes.length - 2)
   //   }
-
   //   return indexes;
   // }
   renderValues() {
