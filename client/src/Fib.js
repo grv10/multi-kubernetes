@@ -18,11 +18,19 @@ class Fib extends Component {
     this.setState({ values: values.data });
   }
 
-  async fetchIndexes() {
+/*  async fetchIndexes() {
     const seenIndexes = await axios.get('/api/values/all');
     console.log(seenIndexes);
     this.setState({
       seenIndexes: this.state.seenIndexes.push(seenIndexes.data)
+    });
+  } */
+
+  async fetchIndexes() {
+    const seenIndexes = await axios.get('/api/values/all');
+    console.log(seenIndexes);
+    this.setState({
+      seenIndexes: this.state.seenIndexes.concat(seenIndexes.data)
     });
   }
 
