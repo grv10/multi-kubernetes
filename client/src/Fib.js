@@ -20,19 +20,10 @@ class Fib extends Component {
 
   async fetchIndexes() {
     const seenIndexes = await axios.get('/api/values/all');
-    console.log(seenIndexes);
     this.setState({
-      seenIndexes: this.state.seenIndexes.push(seenIndexes.data)
+      seenIndexes: seenIndexes.data
     });
   }
-
-  /*async fetchIndexes() {
-    const seenIndexes = await axios.get('/api/values/all');
-    console.log(seenIndexes);
-    this.setState({
-      seenIndexes: this.state.seenIndexes.concat(seenIndexes.data)
-    });
-  }*/
 
   handleSubmit = async event => {
     event.preventDefault();
@@ -44,21 +35,9 @@ class Fib extends Component {
   };
 
   renderSeenIndexes() {
-    console.log(this.state);
-    console.log(this.state.seenIndexes);
     return this.state.seenIndexes.map(({ number }) => number).join(', ');
   }
 
-  // renderSeenIndexes = () => {
-  //   let indexes = '';
-  //   console.log(this.state);
-  //   console.log(this.state.seenIndexes);
-  //   this.state.seenIndexes.forEach((number) => indexes += number + ', ');
-  //   if (this.state.seenIndexes.length) {
-  //     indexes = indexes.substr(0, indexes.length - 2)
-  //   }
-  //   return indexes;
-  // }
   renderValues() {
     const entries = [];
 
